@@ -1,7 +1,6 @@
 package tech.techshop.product.model;
 
 import lombok.Data;
-import tech.techshop.order.model.Order;
 
 import javax.persistence.*;
 
@@ -24,8 +23,5 @@ public class Product {
     private String category;
     @Column
     private Boolean isAvailable;
-    @ManyToOne
-    @JoinColumn(name = "product_order_id")
-    private Order order;
 
 }

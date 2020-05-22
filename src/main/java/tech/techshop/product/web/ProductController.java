@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tech.techshop.product.model.dto.ProductDto;
+import tech.techshop.product.model.ProductDto;
 import tech.techshop.product.service.ProductService;
 
 import java.util.List;

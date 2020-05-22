@@ -1,7 +1,7 @@
 package tech.techshop.order.model.request;
 
 import lombok.Data;
-import tech.techshop.product.model.Product;
+import tech.techshop.product.model.ProductDto;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import java.util.List;
 public class CreateOrderRequest {
     private String consumerName;
     private String consumerEmail;
-    private List<Product> products;
+    private List<ProductDto> products;
 }

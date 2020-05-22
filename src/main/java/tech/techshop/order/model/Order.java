@@ -12,7 +12,7 @@ import java.util.List;
 public class Order {
 
     @Id
-    @Column(name = "product_order_id")
+    @Column
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column
@@ -20,7 +20,8 @@ public class Order {
     @Column
     private String consumerEmail;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany
+    @JoinColumn(name = "order_id")
     private List<Product> products;
 
 }

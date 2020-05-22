@@ -1,4 +1,4 @@
-package tech.techshop.product.model.dto;
+package tech.techshop.product.model;
 
 import lombok.Data;
 
