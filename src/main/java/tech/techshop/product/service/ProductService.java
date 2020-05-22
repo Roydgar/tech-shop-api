@@ -9,8 +9,6 @@ import tech.techshop.product.repository.ProductRepository;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
-
 @Service
 @RequiredArgsConstructor
 public class ProductService {
@@ -19,9 +17,8 @@ public class ProductService {
     private final ProductMapper productMapper;
 
     public List<ProductDto> findAll() {
-        return productRepository.findAll().stream()
-                .map(productMapper::toDto)
-                .collect(toList());
+        List<Product> products = productRepository.findAll();
+        return productMapper.toDto(products);
     }
 
     public ProductDto findById(Long id) {
